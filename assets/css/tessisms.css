@@ -1,0 +1,152 @@
+:root {
+  --tess-accent: #ea4646;
+  --draw-red: #ea4646;
+  --draw-black: white;
+  --draw-yellow: #efbe43;
+  --campfire-blue: #272f3f;
+  --campfire-gradient: linear-gradient(
+    319deg,
+    rgba(239, 190, 67, 1) 12%,
+    rgba(237, 152, 55, 1) 32%,
+    rgba(237, 107, 44, 1) 49%,
+    rgba(226, 85, 79, 1) 80%,
+    rgba(39, 47, 63, 1) 100%
+  );
+  --toolbar-button-size: 40px;
+  --toolbar-margin: 10px;
+}
+
+.logo {
+  z-index: 10;
+  cursor: pointer;
+}
+
+#toolbar {
+  display: none;
+}
+
+#toolbar.show {
+  /* background-color: white; */
+  padding: 20px 7px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: var(--toolbar-margin);
+  left: var(--toolbar-margin);
+  z-index: 45;
+  border: 1px solid white;
+  border-radius: 5px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  /* border-radius: 500px; */
+  gap: 10px;
+  opacity: 20%;
+}
+
+#toolbar:hover {
+  opacity: 100%;
+}
+
+#toolbar button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 500px;
+  width: var(--toolbar-button-size);
+  height: var(--toolbar-button-size);
+}
+
+#clear-canvas {
+  background-color: #c1c1c1;
+  background-image: url(/images/clear.svg);
+  background-size: 50% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#draw-red {
+  background-color: var(--draw-red);
+}
+
+#draw-black {
+  background-color: var(--draw-black);
+}
+
+#draw-yellow {
+  background-color: var(--draw-yellow);
+}
+
+#canvas {
+  display: none;
+}
+#canvas.show {
+  /* cursor: url("/images/pencil.cur"), auto !important; */
+  cursor: crosshair;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.arrow,
+#campfire-text {
+  z-index: 45 !important;
+  position: relative;
+}
+
+.arrow {
+  fill: var(--tess-accent);
+}
+header > p,
+header > p strong {
+  /* color: white; */
+}
+header {
+  /* cursor: url("/images/pencil.cur"), auto !important; */
+}
+#campfire-text {
+  color: rgb(255, 125, 19);
+  border-bottom: 2px solid;
+  transition: all 2s;
+}
+
+#campfire-text:hover {
+  background: var(--campfire-gradient);
+  background-position: 50% 75%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#campfire-icon {
+  width: 25px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1152px) {
+  #toolbar {
+    display: none;
+  }
+
+  #canvas {
+    display: none;
+  }
+}
+
+/* #first .content {
+  background-color: var(--campfire-blue);
+}
+
+#wrapper section {
+  margin: 0 !important;
+} */
+
+a {
+  position: relative;
+  z-index: 11 !important;
+}
