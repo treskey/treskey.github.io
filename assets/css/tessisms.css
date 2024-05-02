@@ -93,14 +93,8 @@
   z-index: 2;
 }
 
-.arrow,
 #campfire-text {
-  z-index: 45 !important;
-  position: relative;
-}
-
-.arrow {
-  fill: var(--tess-accent);
+  color: #f16a41;
 }
 header > p,
 header > p strong {
@@ -111,16 +105,20 @@ header {
 }
 #campfire-text {
   color: rgb(255, 125, 19);
-  border-bottom: 2px solid;
-  transition: all 2s;
+  /* border-bottom: 2px solid; */
 }
 
 #campfire-text:hover {
-  background: var(--campfire-gradient);
+  color: white;
+  /* background: var(--campfire-gradient);
   background-position: 50% 75%;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+}
+
+a:visited {
+  /* color: white; */
 }
 
 #campfire-icon {
