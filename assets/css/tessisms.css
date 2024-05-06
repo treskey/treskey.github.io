@@ -148,3 +148,16 @@ a {
   position: relative;
   z-index: 11 !important;
 }
+
+#doodle-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: #3e4362; */
+  padding: 0px 10px;
+  display: none;
+}
+
+#doodle-message.show {
+  display: block;
+}
