@@ -38,7 +38,11 @@ function isMobile() {
   return false;
 }
 
-if (!isMobile()) {
+if (isMobile()) {
+  let icon = document.getElementById("logo-icon");
+  icon.classList = "";
+  icon.textContent = "☀️";
+} else {
   const canvas = document.getElementById("canvas");
   const clear = document.getElementById("clear-canvas");
   const red = document.getElementById("draw-red");
